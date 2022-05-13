@@ -1,0 +1,262 @@
+@use './abstracts' as ab;
+
+// Font weight
+@function weight($weight-name) {
+  @return map-get(ab.$font-weights, $weight-name);
+}
+
+body {
+  font-family: ab.$Fraunces;
+  font-size: 18px;
+  margin: 0;
+  height: 100%;
+}
+
+nav {
+  position: absolute;
+  
+  // If you want the navbar to scroll with the page
+  // position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-family: ab.$Barlow;
+  transition: top 0.3s;
+}
+
+a {
+  color: ab.$white;
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: weight(bold);
+  padding: 1.4rem;
+  list-style-type: none;
+  font-family: ab.$Barlow;
+}
+
+// Mobile menu
+.menu {
+  display: none;
+}
+
+.item {
+  padding: 1rem 1.3rem;
+}
+
+.item.button a {
+  padding: 1rem 2rem;
+  color: ab.$black;
+  text-transform: uppercase;
+  font-family: ab.$Fraunces; 
+  font-size: 1rem;
+  transition: 0.3s;
+  background-color: ab.$white;
+  border-radius: 3rem;
+
+  &:hover {
+    color: ab.$white;
+    background-color: #6ED1FB;
+  }
+}
+
+.hamburger {
+  margin-top: 5px;
+  display: block;
+  position: relative;
+  z-index: 1;
+
+  user-select: none;
+
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: ab.$white;
+    border-radius: 6px;
+    z-index: 1;
+    transform-origin: 0 0;
+    transition: 0.4s;
+  }
+
+  &:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: ab.$soft-red;
+  }
+
+  &.is-active span:nth-child(1) {
+    transform: translate(0px, -2px) rotate(45deg);
+  }
+
+  &.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  &.is-active span:nth-child(3) {
+    transform: translate(-3px, 3px) rotate(-45deg);
+  }
+
+  &.is-active:hover span {
+    background-color: ab.$soft-red;
+  }
+}
+
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("./../images/desktop/image-header.jpg");
+
+  /* Set a specific height */
+  height: 800px;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: ab.$white;
+  font-size: 1.5rem;
+  letter-spacing: 0.90rem;
+  text-transform: uppercase;
+  white-space: nowrap;
+  
+  h1 {
+    padding-bottom: 5rem;
+    font-weight: weight(bold);
+  }
+}
+
+.row {
+  display: flex;
+  width: 100%;
+}
+
+.cubeContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 50%;
+  height: auto;
+  min-height: 600px;
+  // width: 720px;
+}
+
+.box-transform, .box-stand-out {
+  background-color: ab.$white;
+  
+  h1 {
+    padding: 8rem 13rem 0px 9rem;
+    font-size: 2.0rem;
+    font-weight: weight(bold);
+  }
+
+  p {
+    padding: 0 11rem 1.75rem 9rem;
+    font-weight: weight(thin);
+    font-size: 1rem;
+    font-family: ab.$Barlow;
+    line-height: 1.75rem; 
+  }
+  
+  a {
+    padding: 0 0 0 9.5rem;
+    color: ab.$black;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+}
+
+.box-egg {
+  background-image: url("./../images/desktop/image-transform.jpg");
+}
+
+.box-glass {
+  background-image: url("./../images/desktop/image-stand-out.jpg");
+}
+
+.box-graphic-design {
+  background-image: url("./../images/desktop/image-graphic-design.jpg");
+  color: ab.$desat-cyan;
+}
+
+.box-photography {
+  background-image: url("./../images/desktop/image-photography.jpg");
+  color: ab.$dark-blue;
+}
+
+.box-graphic-design, .box-photography {
+  
+  .text-over {
+    text-align: center;
+    position: absolute;
+    top: 78%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    h1 {
+      font-weight: weight(bold);
+      font-size: 1.5rem;
+    }
+    
+    p {
+      font-size: 1.05rem;
+      line-height: 1.5rem;
+      font-family: ab.$Barlow; 
+    }
+  }
+}
+
+
+.box-egg, .box-glass, .box-graphic-design, .box-photography {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+footer {
+  position:fixed
+  
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
+  }
+
+  .menu {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: left;
+  }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: ab.$purple-blue; }

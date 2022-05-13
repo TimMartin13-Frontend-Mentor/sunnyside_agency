@@ -1,0 +1,21 @@
+{
+  "name": "sunnyside_agency",
+  "version": "1.0.0",
+  "description": "Landing page for Sunnyside Agency",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sass --watch sass/main.scss styles/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimMartin13/sunnyside_agency.git"
+  },
+  "author": "Tim Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TimMartin13/sunnyside_agency/issues"
+  },
+  "homepage": "https://github.com/TimMartin13/sunnyside_agency#readme",
+  "dependencies": {}
+}

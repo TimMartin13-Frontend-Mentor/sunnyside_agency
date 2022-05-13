@@ -1,0 +1,32 @@
+// Colors
+
+// Primary
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$desat-cyan: hsl(167, 40%, 24%);
+$dark-blue: hsl(198, 62%, 26%);
+$moderate-cyan: hsl(168, 34%, 41%);
+
+// Neutral
+$desat-blue: hsl(212, 27%, 19%);
+$very-dark-gray-blue: hsl(213, 9%, 39%);
+$dark-gray-blue: hsl(232, 10%, 55%);
+$gray-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(255, 0%, 0%);
+
+// Attribution
+$purple-blue: hsl(228, 45%, 44%);
+
+// Font
+
+$Barlow: 'Barlow', sans-serif;
+$Fraunces: 'Fraunces', serif;
+
+$font-weights: (
+  "thin": 600,
+  "medium": 700,
+  "bold": 900
+);
+
+$mobile: 800px;
