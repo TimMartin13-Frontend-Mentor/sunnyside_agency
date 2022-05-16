@@ -23,6 +23,7 @@ nav {
   right: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   font-family: ab.$Barlow;
   transition: top 0.3s;
@@ -33,12 +34,10 @@ a {
   text-decoration: none;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: weight(bold);
-  padding: 1.4rem;
+.logo img {
+  width: 175px;  
+  padding-left: 1.4rem;
   list-style-type: none;
-  font-family: ab.$Barlow;
 }
 
 // Mobile menu
@@ -138,8 +137,8 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: ab.$white;
-  font-size: 1.5rem;
-  letter-spacing: 0.90rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.80rem;
   text-transform: uppercase;
   white-space: nowrap;
   
@@ -163,24 +162,24 @@ a {
   width: 50%;
   height: auto;
   min-height: 600px;
-  // width: 720px;
 }
 
 .box-transform, .box-stand-out {
   background-color: ab.$white;
   
   h1 {
-    padding: 8rem 13rem 0px 9rem;
-    font-size: 2.0rem;
+    padding: 7rem 13rem 0rem 9rem;
+    font-size: 2.6rem;
     font-weight: weight(bold);
   }
 
   p {
-    padding: 0 11rem 1.75rem 9rem;
+    padding: 0 8.5rem 1.50rem 9rem;
     font-weight: weight(thin);
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: ab.$Barlow;
-    line-height: 1.75rem; 
+    color: ab.$dark-gray-blue;
+    line-height: 1.90rem; 
   }
   
   a {
@@ -188,6 +187,7 @@ a {
     color: ab.$black;
     text-transform: uppercase;
     font-size: 1rem;
+    font-weight: weight(bold);
   }
 }
 
@@ -240,7 +240,7 @@ a {
 }
 
 .testimonials {
-  padding: 10rem;
+  padding: 9rem;
 }
 
 .testimonial-header {
@@ -249,7 +249,7 @@ a {
   color:ab.$dark-gray-blue;
   letter-spacing: 0.3rem;
   font-size: 1.35rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .testimonial-container {
@@ -264,14 +264,14 @@ a {
   
   .testimonial-image {
     border-radius: 100%;
-    width: 80px;
+    width: 75px;
   }
 
   p {
     font-family: ab.$Barlow;
     color: ab.$very-dark-gray-blue;
-    line-height: 1.75rem;
-    margin: 3.5rem 0;
+    line-height: 2rem;
+    margin: 4rem 0;
   }
   
   h2 {
@@ -295,8 +295,45 @@ a {
 }
 
 footer {
-  position:fixed
+  background-color: ab.$light-cyan;
+  color: ab.$desat-cyan;
+  text-align: center;
   
+}
+
+
+.footer-logo {
+  margin: 4rem 0 2rem 0;
+  width: 175px;
+  filter: invert(24%) sepia(60%) saturate(313%) hue-rotate(116deg) brightness(46%) contrast(88%);
+}
+  
+.footer-link, i {
+  font-family: ab.$Barlow;
+  color: ab.$moderate-cyan;
+
+  &:hover {
+    color: ab.$white;
+    transition: 0.4s;
+  }
+}
+
+.link-container {
+  margin-bottom: 4.5rem;
+}
+
+.footer-link {
+  margin: 1.75rem;
+  font-size: 1.2rem;
+}
+
+.social-media {
+  margin-bottom: 2rem;
+}
+
+.fa-brands {
+  margin: 0.85rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -313,5 +350,5 @@ footer {
   }
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin-top: 2rem;}
 .attribution a { color: ab.$purple-blue; }

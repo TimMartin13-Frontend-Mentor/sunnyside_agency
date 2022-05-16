@@ -8,8 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
-  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="stylesheet" href="./styles/style.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
@@ -18,7 +19,9 @@
   <header class="hero-image">
     <!-- Top Navigation Menu -->
     <nav id="navbar">
-      <li class="logo"><a href="#home" class="active">sunnyside</a></li>
+      <a href="#home" class="logo active">
+        <img src="./images/logo.svg" alt="sunnyside">
+      </a>
       <ul class="menu">
         <li class="item"><a href="#about">About</a></li>
         <li class="item"><a href="#services">Services</a></li>
@@ -115,10 +118,22 @@
       <img src="./images/desktop/image-gallery-sugarcubes.jpg" alt="Sugar cubes">
     </div>
   </section>
-  <footer>
-    About
-    Services
-    Projects
+  <footer class="footer">
+    <!-- <h1 class="footer-logo">sunnyside</h1> -->
+    <a href="#home">
+      <img src="./images/logo.svg" class="footer-logo" alt="sunnyside">
+    </a>
+    <div class="link-container">
+      <a href="#about" class="footer-link">About</a>
+      <a href="#services" class="footer-link">Services</a>
+      <a href="#projects" class="footer-link">Projects</a>
+    </div>
+    <div class="social-media">
+      <a href="#facebook"><i class="fa-brands fa-facebook-square"></i></a>
+      <a href="#instagram"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#twitter"><i class="fa-brands fa-twitter"></i></a>
+      <a href="#pinterest"><i class="fa-brands fa-pinterest"></i></a>
+    </div>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Tim Martin</a>.

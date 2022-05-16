@@ -12,6 +12,7 @@ nav {
   right: 0;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 1rem;
   font-family: "Barlow", sans-serif;
   transition: top 0.3s;
@@ -22,12 +23,10 @@ a {
   text-decoration: none;
 }
 
-.logo {
-  font-size: 2rem;
-  font-weight: 900;
-  padding: 1.4rem;
+.logo img {
+  width: 175px;
+  padding-left: 1.4rem;
   list-style-type: none;
-  font-family: "Barlow", sans-serif;
 }
 
 .menu {
@@ -115,8 +114,8 @@ a {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5rem;
-  letter-spacing: 0.9rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.8rem;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -145,22 +144,24 @@ a {
   background-color: white;
 }
 .box-transform h1, .box-stand-out h1 {
-  padding: 8rem 13rem 0px 9rem;
-  font-size: 2rem;
+  padding: 7rem 13rem 0rem 9rem;
+  font-size: 2.6rem;
   font-weight: 900;
 }
 .box-transform p, .box-stand-out p {
-  padding: 0 11rem 1.75rem 9rem;
+  padding: 0 8.5rem 1.5rem 9rem;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Barlow", sans-serif;
-  line-height: 1.75rem;
+  color: #818498;
+  line-height: 1.9rem;
 }
 .box-transform a, .box-stand-out a {
   padding: 0 0 0 9.5rem;
   color: black;
   text-transform: uppercase;
   font-size: 1rem;
+  font-weight: 900;
 }
 
 .box-egg {
@@ -206,7 +207,7 @@ a {
 }
 
 .testimonials {
-  padding: 10rem;
+  padding: 9rem;
 }
 
 .testimonial-header {
@@ -215,7 +216,7 @@ a {
   color: #818498;
   letter-spacing: 0.3rem;
   font-size: 1.35rem;
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .testimonial-container {
@@ -230,13 +231,13 @@ a {
 }
 .testimonial .testimonial-image {
   border-radius: 100%;
-  width: 80px;
+  width: 75px;
 }
 .testimonial p {
   font-family: "Barlow", sans-serif;
   color: #5a636c;
-  line-height: 1.75rem;
-  margin: 3.5rem 0;
+  line-height: 2rem;
+  margin: 4rem 0;
 }
 .testimonial h2 {
   font-size: 1.15rem;
@@ -256,7 +257,42 @@ a {
 }
 
 footer {
-  position: fixed;
+  background-color: #91d4c4;
+  color: #25564b;
+  text-align: center;
+}
+
+.footer-logo {
+  margin: 4rem 0 2rem 0;
+  width: 175px;
+  filter: invert(24%) sepia(60%) saturate(313%) hue-rotate(116deg) brightness(46%) contrast(88%);
+}
+
+.footer-link, i {
+  font-family: "Barlow", sans-serif;
+  color: #458c7e;
+}
+.footer-link:hover, i:hover {
+  color: white;
+  transition: 0.4s;
+}
+
+.link-container {
+  margin-bottom: 4.5rem;
+}
+
+.footer-link {
+  margin: 1.75rem;
+  font-size: 1.2rem;
+}
+
+.social-media {
+  margin-bottom: 2rem;
+}
+
+.fa-brands {
+  margin: 0.85rem;
+  font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
@@ -275,6 +311,7 @@ footer {
 .attribution {
   font-size: 11px;
   text-align: center;
+  margin-top: 2rem;
 }
 
 .attribution a {
