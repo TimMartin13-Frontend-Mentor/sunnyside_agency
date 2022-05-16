@@ -215,7 +215,7 @@ a {
   color: #818498;
   letter-spacing: 0.3rem;
   font-size: 1.35rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .testimonial-container {
@@ -230,12 +230,13 @@ a {
 }
 .testimonial .testimonial-image {
   border-radius: 100%;
-  width: 100px;
+  width: 80px;
 }
 .testimonial p {
   font-family: "Barlow", sans-serif;
   color: #5a636c;
   line-height: 1.75rem;
+  margin: 3.5rem 0;
 }
 .testimonial h2 {
   font-size: 1.15rem;
@@ -245,6 +246,13 @@ a {
   color: #a7abae;
   font-size: 0.9rem;
   font-family: "Barlow", sans-serif;
+}
+
+.art-container {
+  display: flex;
+}
+.art-container img {
+  width: 25%;
 }
 
 footer {

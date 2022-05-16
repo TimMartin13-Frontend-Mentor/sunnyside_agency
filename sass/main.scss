@@ -249,7 +249,7 @@ a {
   color:ab.$dark-gray-blue;
   letter-spacing: 0.3rem;
   font-size: 1.35rem;
-  padding-bottom: 5rem;
+  padding-bottom: 4rem;
 }
 
 .testimonial-container {
@@ -264,14 +264,14 @@ a {
   
   .testimonial-image {
     border-radius: 100%;
-    width: 100px;
+    width: 80px;
   }
 
   p {
     font-family: ab.$Barlow;
     color: ab.$very-dark-gray-blue;
     line-height: 1.75rem;
-    // margin: 4rem;
+    margin: 3.5rem 0;
   }
   
   h2 {
@@ -286,6 +286,13 @@ a {
   }
 }
 
+.art-container {
+  display: flex;
+
+  img {
+    width: 25%;
+  }
+}
 
 footer {
   position:fixed
