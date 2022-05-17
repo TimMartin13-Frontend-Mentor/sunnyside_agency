@@ -5,19 +5,24 @@
   @return map-get(ab.$font-weights, $weight-name);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: ab.$Fraunces;
   font-size: 18px;
-  margin: 0;
   height: 100%;
+  width: 100%;
 }
 
 nav {
   position: absolute;
-  
+  margin: 0.5rem;
   // If you want the navbar to scroll with the page
   // position: fixed;
-
   top: 0;
   left: 0;
   right: 0;
@@ -36,7 +41,6 @@ a {
 
 .logo img {
   width: 175px;  
-  padding-left: 1.4rem;
   list-style-type: none;
 }
 
@@ -122,6 +126,7 @@ a {
 
   /* Set a specific height */
   height: 800px;
+  width: 100%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -135,12 +140,12 @@ a {
   position: absolute;
   top: 40%;
   left: 50%;
+  width: 100%;
   transform: translate(-50%, -50%);
   color: ab.$white;
   font-size: 1.7rem;
   letter-spacing: 0.80rem;
   text-transform: uppercase;
-  white-space: nowrap;
   
   h1 {
     padding-bottom: 5rem;
@@ -160,21 +165,21 @@ a {
 
 .box {
   width: 50%;
-  height: auto;
-  min-height: 600px;
+  height: 600px;
 }
 
 .box-transform, .box-stand-out {
   background-color: ab.$white;
+  vertical-align: middle;
   
   h1 {
-    padding: 7rem 13rem 0rem 9rem;
+    padding: 10rem 6rem 1.5rem 9rem;
     font-size: 2.6rem;
     font-weight: weight(bold);
   }
-
+  
   p {
-    padding: 0 8.5rem 1.50rem 9rem;
+    padding: 0 8.5rem 2rem 9rem;
     font-weight: weight(thin);
     font-size: 1.1rem;
     font-family: ab.$Barlow;
@@ -189,6 +194,34 @@ a {
     font-size: 1rem;
     font-weight: weight(bold);
   }
+}
+
+.underline_yellow {
+  margin: 0 0 0 9rem;
+  width: 135px;
+  height: 7px;
+  background-color: hsl(51, 100%, 84%);
+  margin-top: -8px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.underline_red{
+  margin: 0 0 0 9rem;
+  width: 135px;
+  height: 7px;
+  background-color: hsl(7, 99%, 80%);
+  margin-top: -8px;
+  border-radius: 4px;
+  transition: 0.4s;
+}
+
+.more-link:hover  .underline_yellow{
+  background-color:hsl(51, 100%, 54%);
+}
+
+.more-link:hover  .underline_red{
+  background-color: hsl(7, 99%, 70%);
 }
 
 .box-egg {
@@ -220,17 +253,18 @@ a {
     
     h1 {
       font-weight: weight(bold);
-      font-size: 1.5rem;
+      font-size: 1.75rem;
+      padding-bottom: 2rem;
     }
     
     p {
-      font-size: 1.05rem;
-      line-height: 1.5rem;
-      font-family: ab.$Barlow; 
+      font-size: 1rem;
+      line-height: 1.75rem;
+      font-family: ab.$Barlow;
+      padding: 0rem 0.5rem; 
     }
   }
 }
-
 
 .box-egg, .box-glass, .box-graphic-design, .box-photography {
   background-position: center;
@@ -240,7 +274,7 @@ a {
 }
 
 .testimonials {
-  padding: 9rem;
+  padding: 10rem;
 }
 
 .testimonial-header {
@@ -260,7 +294,8 @@ a {
 .testimonial {
   text-align: center;
   width: 350px;
-  margin: 1rem;
+  margin: 0.80rem;
+  padding-top: 1rem;
   
   .testimonial-image {
     border-radius: 100%;
@@ -271,12 +306,13 @@ a {
     font-family: ab.$Barlow;
     color: ab.$very-dark-gray-blue;
     line-height: 2rem;
-    margin: 4rem 0;
+    margin: 3rem 0;
   }
   
   h2 {
     font-size: 1.15rem;
     font-weight: weight(bold);
+    padding: 1rem 0;
   }
   
   h3 {
@@ -300,7 +336,6 @@ footer {
   text-align: center;
   
 }
-
 
 .footer-logo {
   margin: 4rem 0 2rem 0;
@@ -328,7 +363,7 @@ footer {
 }
 
 .social-media {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .fa-brands {
@@ -336,17 +371,189 @@ footer {
   font-size: 1.5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 700px) {
   .hamburger {
     display: none;
   }
-
+  
   .menu {
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: left;
+  }
+}
+
+// ----------------------------------- Mobile --------------------------------- //
+@media (max-width: 768px) {
+
+  .logo img {
+    padding-top: 0.5rem;
+    width: 125px;  
+  }
+
+  .hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url("./../images/mobile/image-header.jpg");
+    height: 538px; 
+  }
+  
+  .hero-text {
+    padding-top: 7.5rem;
+
+    h1 {
+      padding-bottom: 3.5rem;
+      font-weight: weight(bold);
+      font-size: 2.5rem;
+      letter-spacing: 0.5rem;
+    }
+  }
+
+  .row {
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 100%;
+    height: auto; 
+  }
+
+  .box-egg {
+    background-image: url("./../images/mobile/image-transform.jpg");
+    order: 1;
+    height: 312px; 
+  }
+  
+  .box-glass {
+    background-image: url("./../images/mobile/image-stand-out.jpg");
+    height: 312px; 
+  }
+  
+  .box-graphic-design {
+    background-image: url("./../images/mobile/image-graphic-design.jpg");
+  }
+  
+  .box-photography {
+    background-image: url("./../images/mobile/image-photography.jpg");
+  }
+
+  .box-transform {
+    order: 2;
+  }
+
+  .box-transform, .box-stand-out {
+    text-align: center;
+    height: 438px;
+
+    h1 {
+      padding: 4rem 1rem 1.5rem 1rem;
+      font-size: 2rem;
+    }
+  
+    p {
+      padding: 0 2rem 2rem 1rem;
+    }
+    
+    a {
+      padding: 0rem;
+    }
+  }
+  
+  .underline_yellow, .underline_red {
+    margin: auto;
+    margin-top: -8px;
+  }
+  
+  .box-graphic-design, .box-photography {
+    height: 600px;
+
+    .text-over {
+      position: absolute;
+      top: 78%;
+      left: 50%;
+      width: 100%;
+      
+      h1 {
+        font-weight: weight(bold);
+        font-size: 1.75rem;
+        padding-bottom: 2rem;
+      }
+      
+      p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        font-family: ab.$Barlow;
+        padding: 0 1rem; 
+      }
+    }
+  }
+
+  .testimonials {
+    padding: 4rem 0 0 0;
+  }
+
+  .testimonial-header {
+    letter-spacing: 0.3rem;
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .testimonial-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial {
+    width: 330px;
+    padding-bottom: 2rem;
+
+    p {
+      font-family: ab.$Barlow;
+      color: ab.$very-dark-gray-blue;
+      line-height: 2rem;
+      margin: 1rem 0;
+    }
+    
+    h2 {
+      font-size: 1.15rem;
+      font-weight: weight(bold);
+      padding: 1rem 0;
+    }
+    
+    h3 {
+      color:ab.$gray-blue;
+      font-size: 0.9rem;
+      font-family: ab.$Barlow;
+    }
+  }
+
+}
+
+@media (max-width: 500px) {
+  .art-container {
+    flex-wrap: wrap;
+
+    img {
+      width: 50%;
+      height: 188px;
+
+      &:nth-child(1) {
+        content: url("./../images/mobile/image-gallery-milkbottles.jpg");
+      }
+
+      &:nth-child(2) {
+        content: url("./../images/mobile/image-gallery-orange.jpg");
+      }
+
+      &:nth-child(3) {
+        content: url("./../images/mobile/image-gallery-cone.jpg");
+      }
+
+      &:nth-child(4) {
+        content: url("./../images/mobile/image-gallery-sugar-cubes.jpg");
+      }
+    }
   }
 }
 
