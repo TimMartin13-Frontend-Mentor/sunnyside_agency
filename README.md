@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Github pages](https://timmartin13.github.io/sunnyside_agency/)
+- Live Site URL: [Github pages](https://timmartin13-frontend-mentor.github.io/sunnyside_agency/)
 
 ## My process
 
